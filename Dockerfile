@@ -27,7 +27,7 @@ RUN chown www-data:root /var/lib/{phpfiwa,phpfina,phptimeseries}
 
 RUN mkdir -p /var/www/emoncms
 RUN chown www-data:www-data /var/www/emoncms
-RUN git clone https://github.com/emoncms/emoncms.git /var/www/emoncms
+RUN git clone -b 9.0 https://github.com/emoncms/emoncms.git /var/www/emoncms
 
 
 RUN cp /var/www/emoncms/default.settings.php /var/www/emoncms/settings.php
