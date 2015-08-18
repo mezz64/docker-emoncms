@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN sudo apt-get update
 
-RUN sudo apt-get install -y mysql-server mysql-client php5-fpm php5-mysql php5-curl php-pear php5-dev php5-mcrypt php5-json git-core redis-server build-essential ufw ntp
+RUN sudo apt-get install -y apache2 mysql-server mysql-client php5-fpm php5-mysql php5-curl php-pear php5-dev php5-mcrypt php5-json git-core redis-server build-essential ufw ntp
 RUN sudo pear channel-discover pear.swiftmailer.org
 RUN sudo pecl install channel://pecl.php.net/dio-0.0.6 redis swift/swift
 RUN sudo sh -c 'echo "extension=dio.so" > /etc/php5/apache2/conf.d/20-dio.ini'
